@@ -1,7 +1,7 @@
 nameScore <- function(name) {
   fullname <- data.frame(name)
   fullname$name <- as.character(fullname$name)
-  i<- gsub("(?<=[A-Z])[^A-Z]+", "", fullname$name, perl = TRUE)
+  i <- gsub("(?<=[A-Z])[^A-Z]+", "", fullname$name, perl = TRUE)
   
   i1 <- strsplit(i, split = "")
   i2 <- unlist(i1, use.names = FALSE)
