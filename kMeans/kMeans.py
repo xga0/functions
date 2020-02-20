@@ -21,8 +21,8 @@ if __name__ == "__main__":
     dat2=normsamp(n,mu2)
     dat3=normsamp(n,mu3)
     
-    dat = np.append(dat1,dat2,axis=0)
-    dat = np.append(dat,dat3,axis=0)
+    dat = np.append(dat1,dat2,axis = 0)
+    dat = np.append(dat,dat3,axis = 0)
 
     # Lloyd's methods 
     k = 3 # number of cluster 
@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
         newmus = []
         for i in np.arange(k):
-            newmu = np.mean(dat[np.array(grps)==i],axis=0)
+            newmu = np.mean(dat[np.array(grps) == i],axis = 0)
             newmus.append(newmu)
 
         error = np.sum([np.sqrt(norm(newmus[i] - mus[i])) for i in np.arange(k)])
@@ -60,8 +60,3 @@ if __name__ == "__main__":
     plt.plot(newmus[:,0],newmus[:,1],'r*')
     plt.axis('equal')
     plt.show()
-
-    
-
-
-
